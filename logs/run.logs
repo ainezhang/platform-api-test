@@ -1,0 +1,10 @@
+Fri, 03 Jul 2020 18:50:33 - log_demo.py[line:27] - DEBUG: 调试信息
+Fri, 03 Jul 2020 18:50:33 - log_demo.py[line:28] - INFO: 正常信息
+Fri, 03 Jul 2020 18:50:33 - log_demo.py[line:29] - WARNING: 警告信息
+Fri, 03 Jul 2020 18:50:33 - log_demo.py[line:30] - ERROR: 出错
+Fri, 03 Jul 2020 18:50:33 - log_demo.py[line:31] - CRITICAL: 严重出错
+Fri, 03 Jul 2020 18:50:33 - log_demo.py[line:35] - ERROR: [Errno 2] No such file or directory: 'abc.txt'
+Traceback (most recent call last):
+  File "/Users/liying.zhang/PycharmProjects/platform-api-test/tmp/log_demo.py", line 33, in <module>
+    open('abc.txt')
+FileNotFoundError: [Errno 2] No such file or directory: 'abc.txt'
