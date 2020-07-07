@@ -2,23 +2,19 @@ import requests
 import json
 
 
-def lottery(num):
-    #测试活动已结束，抽奖失败
-    url = 'https://devapi-takumi.mihoyo.com/event/excalibur/lottery'
-    data = {
-        'act_id': 'e202006151956571',
-        'cnt': 1
-    }
-    headers = {"cookie": "account_id=29168;cookie_token=NFvQwVaguwg8QGMyNdakxCOPBV5w0uvFQood7mzo",
-               "x-rpc-device_id": "123"}
-
-    for i in range(num):
-        res = requests.post(url, data=json.dumps(data), headers=headers)
-
-    # a = res.json()['data']['list']
-    print(res.text)
-    # print(len(a))
+def test_01(load):
+    d = load('data.json')
+    print(d)
 
 
-if __name__ == '__main__':
-    lottery(1)
+def test_02(data):
+    print(data)
+
+
+def test_03(test_data):
+    print(test_data)
+
+
+def test_04(db):
+    r = db.query("SELECT * from bbs_activity_calendar.act_info WHERE game_biz='bbs_cn'")
+    print(r)
