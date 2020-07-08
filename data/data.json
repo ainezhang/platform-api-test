@@ -1,0 +1,10 @@
+{
+  "testcase1": {
+    "method": "POST",
+    "url": "https://httpbin.org/post",
+    "data": {
+      "name": "Lily",
+      "password": "123456"
+    }
+  }
+}
