@@ -1,3 +1,4 @@
+#该文件对请求方法进行封装
 import requests
 
 
