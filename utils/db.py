@@ -1,50 +1,42 @@
 import pymysql
+from utils.log import get_logger
+
+log = get_logger('db')
+
+DB_CONF = dict(
+    host="rm-uf6f65xnlzrv74lxaao.mysql.rds.aliyuncs.com",
+    port=3306,
+    user="plat_dev",
+    password="ILpg6yNn0MQbDc0sLqjJ",
+    charset="utf8",
+    autocommit=True
+)
 
 
 class DB:
-
     def __init__(self):
-        # 创建连接
-        self.conn = pymysql.connect(
-            host="rm-uf6f65xnlzrv74lxaao.mysql.rds.aliyuncs.com",
-            user="plat_dev",
-            password="ILpg6yNn0MQbDc0sLqjJ",
-            port=3306,
-            charset="utf8",
-            cursorclass=pymysql.cursors.DictCursor  # sql语句返回结果是字典类型
-        )
-        self.cursor = self.conn.cursor()
+        # 创建连接,sql语句返回结果是字典类型
+        self.conn = pymysql.connect(**DB_CONF)
+        self.cursor = self.conn.cursor(pymysql.cursors.DictCursor)
 
     def __del__(self):
         self.cursor.close()
         self.conn.close()
 
-    def query(self, sql, args=None, is_all=False):
-        """
-        :param sql:
-        :param args:
-        :param is_all:是否查询多条记录
-        :return:
-        """
-        self.cursor.execute(sql, args=args)
+    def query(self, sql):
+        self.cursor.execute(sql)
         self.conn.commit()
-        if is_all:
-            # 返回多条数据
-            data = self.cursor.fetchall()
-        else:
-            # 返回一条数据
-            data = self.cursor.fetchone()
-        print(data)
-        return data
+        result = self.cursor.fetchall()
+        log.debug(f'查询sql:{sql}查询结果:{result}')
+        return result
 
     def exec(self, sql):
         try:
             self.cursor.execute(sql)
-            self.conn.commit()
+            log.debug(f'执行sql:{sql}')
         except Exception as e:
             # 发生错误时回滚
             self.conn.rollback()
-            print(str(e))
 
 
 if __name__ == "__main__":

@@ -20,6 +20,7 @@ def test_data(request):  # 获取默认数据中本用例的数据
     case_name = request.function.__name__  # 获取调用函数名称
     return data.get(case_name)
 
+
 @pytest.fixture(scope='session')
 def db():
     db = DB()
