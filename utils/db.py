@@ -13,7 +13,7 @@ DB_CONF = dict(
 )
 
 
-class DB:
+class DB(object):
     def __init__(self):
         # 创建连接,sql语句返回结果是字典类型
         self.conn = pymysql.connect(**DB_CONF)
@@ -28,6 +28,7 @@ class DB:
         self.conn.commit()
         result = self.cursor.fetchall()
         log.debug(f'查询sql:{sql}查询结果:{result}')
+        print(result)
         return result
 
     def exec(self, sql):
@@ -38,10 +39,10 @@ class DB:
             # 发生错误时回滚
             self.conn.rollback()
 
-
-if __name__ == "__main__":
-    mysql = DB()
-    # sql1 = "SELECT * from bbs_activity_calendar.act_info WHERE game_biz='bbs_cn'"
-    # ret1 = mysql.query(sql1)
-    sql2 = "DELETE from bbs_activity_calendar.act_info WHERE name='bbs54';"
-    ret2 = mysql.exec(sql2)
+# if __name__ == "__main__":
+#     mysql = DB()
+#     sql1 = "SELECT * from bbs_activity_calendar.act_info WHERE game_biz='bbs_cn'"
+#     ret1 = mysql.query(sql1)
+#     print(ret1[0]['id'])
+#     sql2 = "DELETE from bbs_activity_calendar.act_info WHERE name='bbs54';"
+#     ret2 = mysql.exec(sql2)

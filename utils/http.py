@@ -11,7 +11,8 @@ class HTTP(object):
     def request(self, method, url: str, **kwargs):
         if self.base_url and not url.startswith('https'):
             url = self.base_url + url
-        self.session.request(method, url, **kwargs)
+        res = self.session.request(method, url, **kwargs)
+        return res
 
     def get(self, url, **kwargs):
         return self.request('GET', url, **kwargs)
@@ -20,6 +21,6 @@ class HTTP(object):
         return self.request('POST', url, **kwargs)
 
 
-if __name__ == '__main__':
-    http = HTTP()
-    http.get()
+# if __name__ == '__main__':
+#     http = HTTP()
+#     http.get()
