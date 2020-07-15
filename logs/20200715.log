@@ -1,0 +1,7 @@
+2020-07-15 11:16:38,123 - data.py[line:17] - DEBUG: 文件路径: /Users/liying.zhang/PycharmProjects/platform-api-test/data/data.yaml 数据: {'params_a': 'gids=1&post_id=1423218&order_type=1&limit=10&only_master=false&is_hot=true'}
+2020-07-15 11:16:57,846 - data.py[line:17] - DEBUG: 文件路径: /Users/liying.zhang/PycharmProjects/platform-api-test/data/data.yaml 数据: {'params_a': 'gids=1&post_id=1423218&order_type=1&limit=10&only_master=false&is_hot=true'}
+2020-07-15 11:21:22,424 - data.py[line:17] - DEBUG: 文件路径: /Users/liying.zhang/PycharmProjects/platform-api-test/data/data.yaml 数据: {'params_a': 'gids=1&post_id=1423218&order_type=1&limit=10&only_master=false&is_hot=true'}
+2020-07-15 11:24:02,113 - data.py[line:17] - DEBUG: 文件路径: /Users/liying.zhang/PycharmProjects/platform-api-test/data/data.yaml 数据: {'params_a': 'gids=1&post_id=1423218&order_type=1&limit=10&only_master=false&is_hot=true'}
+2020-07-15 11:25:21,281 - data.py[line:17] - DEBUG: 文件路径: /Users/liying.zhang/PycharmProjects/platform-api-test/data/data.yaml 数据: {'params_a': 'gids=1&post_id=1423218&order_type=1&limit=10&only_master=false&is_hot=true'}
+2020-07-15 11:26:27,476 - data.py[line:17] - DEBUG: 文件路径: /Users/liying.zhang/PycharmProjects/platform-api-test/data/event_award.yaml 数据: {'act_id': 'e202006151713241', 'device_id': '99C29E73024E4E2E91577F15A72D27F4'}
+2020-07-15 11:40:32,654 - data.py[line:17] - DEBUG: 文件路径: /Users/liying.zhang/PycharmProjects/platform-api-test/data/event_award.yaml 数据: {'act_id': 'e202006151713241', 'device_id': '99C29E73024E4E2E91577F15A72D27F4'}
