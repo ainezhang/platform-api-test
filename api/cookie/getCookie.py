@@ -26,8 +26,8 @@ class GetCookie(HTTP):
 
     def get_cookie_token(self, uid):
         """通过stoken来获取cookie_token的值"""
-        url = 'https://devapi-takumi.mihoyo.com/auth/api/getCookieAccountInfoBySToken?stoken={}&uid={}}'.format(
-            self.get_token(), uid)
+        url = 'https://devapi-takumi.mihoyo.com/auth/api/getCookieAccountInfoBySToken?stoken={token}&uid={uid}'.format(
+            token=self.get_token(uid),uid=uid)
         res = requests.get(url)
 
     def get_cookie(self,uid):
