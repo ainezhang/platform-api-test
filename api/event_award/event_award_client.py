@@ -8,10 +8,10 @@ from utils.http import HTTP
 
 
 class ScoreLottery(HTTP):
-    def __init__(self):
-        account = random.choice(UserInfo.mapping)
-        self.uid = account.get("uid")
-        self.cookie = GetCookie().get_cookie(self.uid)
+    # def __init__(self):
+    #     account = random.choice(UserInfo.mapping)
+    #     self.uid = account.get("uid")
+    #     self.cookie = GetCookie().get_cookie(self.uid)
 
     def lottery(self, act_id, device_id):
         url = '/event/excalibur/lottery'
@@ -20,7 +20,10 @@ class ScoreLottery(HTTP):
             "cnt": 1
         }
         headers = {
-            "cookie": self.cookie,
+            "cookie": "account_id=17365; cookie_token=hw71bJXjnM3kgjstCBn8txyCwZvfNpfRBwy47fRi;ltoken=QfXnKu5ioY64j4myKrmmYOy9JeHUKXkJwO5Jv8tp",
             "x-rpc-device_id": device_id}
+        # headers = {
+        #     "cookie": self.cookie,
+        #     "x-rpc-device_id": device_id}
         res = self.post(url, data=json.dumps(data), headers=headers)
         return res.json()
