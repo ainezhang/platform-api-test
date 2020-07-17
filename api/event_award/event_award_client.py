@@ -2,7 +2,7 @@
 import json
 import random
 
-from api.cookie.getCookie import GetCookie
+from api.cookie.get_user_cookie import GetCookie
 from const import UserInfo
 from utils.http import HTTP
 
@@ -20,10 +20,7 @@ class ScoreLottery(HTTP):
             "cnt": 1
         }
         headers = {
-            "cookie": "account_id=17365; cookie_token=hw71bJXjnM3kgjstCBn8txyCwZvfNpfRBwy47fRi;ltoken=QfXnKu5ioY64j4myKrmmYOy9JeHUKXkJwO5Jv8tp",
+            "cookie": self.cookie,
             "x-rpc-device_id": device_id}
-        # headers = {
-        #     "cookie": self.cookie,
-        #     "x-rpc-device_id": device_id}
         res = self.post(url, data=json.dumps(data), headers=headers)
         return res.json()
