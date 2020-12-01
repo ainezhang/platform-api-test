@@ -1,3 +1,0 @@
-2020-07-08 00:16:27,877 - data.py[line:15] - DEBUG: 文件路径:/Users/zhangliying/PycharmProjects/platform-api-test/data/data.json 数据:{'method': 'GET', 'url': 'https://httpbin.org/get', 'params': {'a': 1, 'b': 2}}
-2020-07-08 00:16:56,761 - data.py[line:15] - DEBUG: 文件路径:/Users/zhangliying/PycharmProjects/platform-api-test/data/data.json 数据:{'method': 'GET', 'url': 'https://httpbin.org/get', 'params': {'a': 1, 'b': 2}}
-2020-07-08 00:17:07,748 - data.py[line:15] - DEBUG: 文件路径:/Users/zhangliying/PycharmProjects/platform-api-test/data/data.json 数据:{'method': 'GET', 'url': 'https://httpbin.org/get', 'params': {'a': 1, 'b': 2}}

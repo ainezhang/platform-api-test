@@ -1,1 +1,0 @@
-2020-07-12 00:08:09,712 - data.py[line:15] - DEBUG: 文件路径:/Users/zhangliying/PycharmProjects/platform-api-test/data/data.json 数据:{'testcase1': {'method': 'POST', 'url': 'https://httpbin.org/post', 'data': {'name': 'Lily', 'password': '123456'}}}
