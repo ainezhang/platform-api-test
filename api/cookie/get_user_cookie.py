@@ -10,10 +10,9 @@ import re
 
 import requests
 
-from utils.http import HTTP
 
 
-class GetCookie(HTTP):
+class GetCookie():
     def get_token(self, uid):
         '''测试环境stoken默认为永久有效'''
         url = 'http://47.103.40.66/communityUtils/getCookie/?uid={}&env=dev'.format(uid)
